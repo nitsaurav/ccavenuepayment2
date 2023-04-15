@@ -1,0 +1,21 @@
+public function openpaymentform(){
+       $this->load->view('payment/config');      	
+       $this->load->view('payment/dataFrom');      
+    }
+ 
+     public function ccavRequestHandler(){
+     	$data['postdata'] = $this->input->post();
+        $this->load->view('payment/config');    
+        $this->load->view('payment/Crypto');       
+        $this->load->view('payment/ccavRequestHandler',$data);  
+     
+     }
+
+     public function ccavResponseHandler(){
+     	$data['postdata'] = $this->input->post();
+        $this->load->view('payment/config');  
+        $this->load->view('payment/Crypto');             
+        $this->load->view('payment/ccavResponseHandler',$data);  
+     }
+ 
+        
